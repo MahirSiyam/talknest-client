@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+a.active{
+    @apply bg-[#117a65]
+}
+
+a.active{
+    @apply text-white font-semibold
+}
