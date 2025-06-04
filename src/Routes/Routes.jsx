@@ -8,6 +8,7 @@ import MyBookedTutors from "../Pages/MyBookedTutors";
 import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
 import ErrorPage from "../Pages/ErrorPage";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -24,15 +25,21 @@ export const router = createBrowserRouter([
       },
       {
         path: "/addTutors",
-        element: <AddTutors></AddTutors>,
+        element: <PrivateRoute>
+          <AddTutors></AddTutors>
+        </PrivateRoute>,
       },
       {
         path: "/myTutors",
-        element: <MyTutors></MyTutors>,
+        element: <PrivateRoute>
+          <MyTutors></MyTutors>
+        </PrivateRoute>,
       },
       {
         path: "/myBookedTutors",
-        element: <MyBookedTutors></MyBookedTutors>,
+        element: <PrivateRoute>
+          <MyBookedTutors></MyBookedTutors>
+        </PrivateRoute>,
       },
       {
         path: "/auth/logIn",

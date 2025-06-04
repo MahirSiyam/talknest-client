@@ -25,7 +25,7 @@ const blogs = [
 
 const Blog = () => {
   return (
-    <section className="p-10 bg-white text-center dark:bg-base-100 rounded-2xl border-2 border-gray-100">
+    <section className="p-10 bg-white text-center dark:bg-base-100 rounded-2xl border-1 border-gray-50">
       <h2 className="text-4xl font-bold mb-2 text-base-200 dark:text-base-content">Latest Blog</h2>
       <p className="text-base-200 mb-10 max-w-2xl mx-auto dark:text-base-content">
         Our team of experienced and certified instructors is committed to helping you achieve fluency and confidence in English.

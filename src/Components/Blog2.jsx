@@ -6,7 +6,7 @@ import Lottie from 'lottie-react';
 
 const Blog2 = () => {
   return (
-    <section className="p-10 bg-white text-center dark:bg-base-100 rounded-2xl border-2 border-gray-100">
+    <section className="p-10 bg-white text-center dark:bg-base-100 rounded-2xl border-1 border-gray-50">
       <h2 className="text-3xl md:text-4xl font-bold  text-base-200 dark:text-base-content mb-12">
         What Makes Us Different ?
       </h2>

@@ -1,8 +1,31 @@
-import React from "react";
+import React, { use } from "react";
 import { NavLink } from "react-router";
 import logo from "../assets/logo/linguistic_7514362.png";
+import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navber = () => {
+  const { user, logOut } = use(AuthContext);
+  console.log(user);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          title: "Logout Successfully!",
+          icon: "success",
+          draggable: true,
+        });
+      })
+      .catch(() => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          footer: '<a href="#">Why do I have this issue?</a>',
+        });
+      });
+  };
 
   const links = (
     <>
@@ -56,9 +79,7 @@ const Navber = () => {
         <div className="flex justify-center items-center gap-1">
           <img className="w-10 md:w-12 hidden md:flex" src={logo} alt="" />
 
-          <a className="text-2xl font-bold">
-            Talknest
-          </a>
+          <a className="text-2xl font-bold">Talknest</a>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -66,7 +87,7 @@ const Navber = () => {
           {links}
         </ul>
       </div>
-      <div className="navbar-end gap-3">
+      <div className="navbar-end gap-2">
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
           <input
@@ -94,8 +115,28 @@ const Navber = () => {
           </svg>
         </label>
 
-        <NavLink to={`/auth/logIn`} className="btn">Login</NavLink>
-        <NavLink to={`/auth/register`} className="btn">Register</NavLink>
+        {/* avater */}
+        <div className="tooltip tooltip-bottom" data-tip={user ? user?.email : ""}>
+          <div className="avatar cursor-pointer">
+            <div className="w-11 rounded-full">
+              <img src={user ? user?.photoURL : "https://img.freepik.com/premium-vector/user-profile-icon-flat-style-member-avatar-vector-illustration-isolated-background-human-permission-sign-business-concept_157943-15752.jpg?semt=ais_hybrid&w=740"} alt="" />
+            </div>
+          </div>
+        </div>
+
+        {/* btn */}
+        {user ? (
+          <button onClick={handleLogOut} className="btn bg-[#117a65] font-semibold text-white">Logout</button>
+        ) : (
+          <div className="flex gap-2">
+            <NavLink to={`/auth/logIn`} className="btn bg-[#117a65] font-semibold text-white">
+              Login
+            </NavLink>
+            <NavLink to={`/auth/register`} className="btn bg-[#117a65] font-semibold text-white">
+              Register
+            </NavLink>
+          </div>
+        )}
       </div>
     </div>
   );
