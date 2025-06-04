@@ -14,9 +14,9 @@ const Footer = () => {
             <div className="flex justify-center items-center gap-1 md:ml-20">
               <img className="w-10 md:w-12" src={logo} alt="" />
 
-              <a className="text-2xl font-bold">
+              <p className="text-2xl font-bold">
                 Talknest
-              </a>
+              </p>
             </div>
           </a>
         </div>
