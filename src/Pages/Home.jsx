@@ -6,6 +6,7 @@ import Blog2 from '../Components/Blog2';
 const Home = () => {
     return (
         <div>
+            <title>Home</title>
             <div className='mb-10'>
                 <Banner></Banner>
             </div>
