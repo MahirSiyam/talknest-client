@@ -3,8 +3,8 @@ import logo from "../assets/logo/linguistic_7514362.png";
 
 const Footer = () => {
   return (
-    <footer className="px-4 divide-y dark:bg-gray-100 dark:text-gray-800">
-      <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+    <footer className="px-4 divide-y dark:bg-base-300 dark:text-base-content">
+      <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row border-b-2 lg:space-y-0">
         <div className="lg:w-1/3 ">
           <a
             rel="noopener noreferrer"
@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="flex justify-center items-center gap-1 md:ml-20">
               <img className="w-10 md:w-12" src={logo} alt="" />
 
-              <p className="text-2xl font-bold">
+              <p className="text-2xl text-base-200 dark:text-base-content font-bold">
                 Talknest
               </p>
             </div>
@@ -22,10 +22,10 @@ const Footer = () => {
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3">
-            <h3 className="tracking-wide uppercase dark:text-gray-900">
+            <h3 className="tracking-wide uppercase text-base-200 dark:text-base-content">
               Product
             </h3>
-            <ul className="space-y-1">
+            <ul className="space-y-1 text-base-200 dark:text-base-content">
               <li>
                 <a rel="noopener noreferrer" href="#">
                   Features
@@ -48,8 +48,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="space-y-3">
-            <h3 className="tracking-wide uppercase dark:text-gray-900">
+          <div className="space-y-3 text-base-200 dark:text-base-content">
+            <h3 className="tracking-wide uppercase">
               Company
             </h3>
             <ul className="space-y-1">
@@ -65,8 +65,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="space-y-3">
-            <h3 className="uppercase dark:text-gray-900">Developers</h3>
+          <div className="space-y-3 text-base-200 dark:text-base-content">
+            <h3 className="uppercase">Developers</h3>
             <ul className="space-y-1">
               <li>
                 <a rel="noopener noreferrer" href="#">
@@ -85,8 +85,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="space-y-3">
-            <div className="uppercase dark:text-gray-900">Social media</div>
+          <div className="space-y-3 text-base-200 dark:text-base-content">
+            <div className="uppercase">Social media</div>
             <div className="flex justify-start space-x-3">
               <a
                 rel="noopener noreferrer"
@@ -136,7 +136,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-6 text-sm text-center dark:text-gray-600">
+      <div className="py-6 text-sm text-center text-base-200 dark:text-base-content">
         © 1968 Company Co. All rights reserved.
       </div>
     </footer>

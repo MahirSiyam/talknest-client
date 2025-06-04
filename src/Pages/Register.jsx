@@ -27,7 +27,7 @@ const Register = () => {
     style={{ maxWidth: "600px", width: "100%" }}
   />
 
-  <div className="card bg-base-100 w-full max-w-sm shadow-2xl border border-gray-100">
+  <div className="card bg-base-100 w-full max-w-sm shadow-2xl border border-gray-100 rounded-2xl">
     <div className="card-body">
       <h1 className="text-3xl md:text-5xl font-bold text-center mb-6">Register now!</h1>
       <form onSubmit={handleRegister} className="space-y-3">

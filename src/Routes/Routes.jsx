@@ -7,7 +7,7 @@ import MyTutors from "../Pages/MyTutors";
 import MyBookedTutors from "../Pages/MyBookedTutors";
 import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
-import AuthLayout from "../Layouts/AuthLayout";
+import ErrorPage from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -34,12 +34,6 @@ export const router = createBrowserRouter([
         path: "/myBookedTutors",
         element: <MyBookedTutors></MyBookedTutors>,
       },
-    ],
-  },
-  {
-    path: "/auth",
-    element: <AuthLayout></AuthLayout>,
-    children: [
       {
         path: "/auth/logIn",
         element: <LogIn></LogIn>,
@@ -49,5 +43,9 @@ export const router = createBrowserRouter([
         element: <Register></Register>,
       },
     ],
+  },
+  {
+    path: "/*",
+    element: <ErrorPage></ErrorPage>,
   },
 ]);

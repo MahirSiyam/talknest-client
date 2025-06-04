@@ -13,7 +13,7 @@ const LogIn = () => {
 
         </Lottie>
 
-      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl border-1 border-gray-100">
+      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl border-1 border-gray-100 rounded-2xl">
         <div className="card-body">
           <h1 className="text-5xl font-bold text-center space-y-3">Login now!</h1>
           <form className="fieldset">
