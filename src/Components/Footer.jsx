@@ -5,20 +5,19 @@ const Footer = () => {
   return (
     <footer className="px-4 divide-y dark:bg-gray-100 dark:text-gray-800">
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-        <div className="lg:w-1/3">
+        <div className="lg:w-1/3 ">
           <a
             rel="noopener noreferrer"
             href="#"
             className="flex justify-center space-x-3 lg:justify-start"
           >
-            
-            <div className="flex justify-center items-center gap-1">
-                      <img className="w-10 md:w-12" src={logo} alt="" />
-            
-                        <a className="text-5xl font-bold">T<span className="text-2xl font-semibold">alknest</span></a>
-                
-                    </div>
+            <div className="flex justify-center items-center gap-1 md:ml-20">
+              <img className="w-10 md:w-12" src={logo} alt="" />
 
+              <a className="text-2xl font-bold">
+                Talknest
+              </a>
+            </div>
           </a>
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
