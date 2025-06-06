@@ -20,6 +20,7 @@ const TutorsDetails = () => {
       language,
       description,
       price,
+      review: 0,
       tutorEmail: email,
       user: user.email,
     };
@@ -39,7 +40,7 @@ const TutorsDetails = () => {
   };
 
   return (
-    <div className="flex-col md:flex lg:card-side gap-2 bg-base-100 shadow-lg m-[34px] border-2 border-gray-50 rounded-tr-4xl">
+    <div className="flex-col md:flex lg:card-side gap-2 bg-base-100 shadow-lg m-[34px] border-2 border-gray-50 rounded-br-4xl">
       <title>Tutor Details</title>
       <figure>
         <img src={image} alt="Album" />
