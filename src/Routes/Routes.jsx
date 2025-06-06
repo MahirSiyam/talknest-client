@@ -9,6 +9,7 @@ import LogIn from "../Pages/LogIn";
 import Register from "../Pages/Register";
 import ErrorPage from "../Pages/ErrorPage";
 import PrivateRoute from "../Provider/PrivateRoute";
+import TutorsDetails from "../Components/TutorsDetails";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,13 @@ export const router = createBrowserRouter([
         element: <PrivateRoute>
           <MyBookedTutors></MyBookedTutors>
         </PrivateRoute>,
+      },
+      {
+        path: "/tutorsDetails/:id",
+        element: <PrivateRoute>
+          <TutorsDetails></TutorsDetails>
+        </PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:3000/tutorials/${params.id}`)
       },
       {
         path: "/auth/logIn",

@@ -6,7 +6,6 @@ import Swal from "sweetalert2";
 
 const Navber = () => {
   const { user, logOut } = use(AuthContext);
-  console.log(user);
 
   const handleLogOut = () => {
     logOut()
@@ -48,7 +47,7 @@ const Navber = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-lg border-b-1 border-b-gray-100">
       <div className="navbar-start md:gap-2">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -87,7 +86,7 @@ const Navber = () => {
           {links}
         </ul>
       </div>
-      <div className="navbar-end gap-2">
+      <div className="navbar-end gap-3">
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
           <input

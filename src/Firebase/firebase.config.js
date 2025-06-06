@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAlFkL7iCjweZd0eM4LxoM0J7qAB67teGk",
-  authDomain: "talknest-ab7a1.firebaseapp.com",
-  projectId: "talknest-ab7a1",
-  storageBucket: "talknest-ab7a1.firebasestorage.app",
-  messagingSenderId: "1045754013074",
-  appId: "1:1045754013074:web:5bf7779590403c13decd4b"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

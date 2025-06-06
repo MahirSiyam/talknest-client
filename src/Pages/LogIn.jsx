@@ -73,6 +73,7 @@ const LogIn = () => {
               name="email"
               className="input"
               placeholder="Email"
+              required
             />
 
             {/* password */}
@@ -82,6 +83,10 @@ const LogIn = () => {
               name="password"
               className="input"
               placeholder="Password"
+              minLength="8"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+              required
             />
             <div>
               <a className="link link-hover">Forgot password?</a>
