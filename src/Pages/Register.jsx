@@ -17,7 +17,7 @@ const Register = () => {
     googleLogIn(provider)
       .then(() => {
         Swal.fire({
-          title: "Logout Successfully!",
+          title: "Login Successfully!",
           icon: "success",
           draggable: true,
         });
@@ -45,12 +45,21 @@ const Register = () => {
     console.log({ name, email, photoURL, password });
 
     createUser(email, password)
-      .then((res) => {
-        const user = res.user;
-        console.log(user);
+      .then(() => {
+        Swal.fire({
+          title: "Register Successfully!",
+          icon: "success",
+          draggable: true,
+        });
+        navigate("/");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          footer: '<a href="#">Why do I have this issue?</a>',
+        });
       });
   };
 

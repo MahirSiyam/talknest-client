@@ -44,11 +44,21 @@ const LogIn = () => {
     console.log({ email, password });
 
     logIn(email, password)
-      .then((res) => {
-        console.log(res);
+      .then(() => {
+        Swal.fire({
+          title: "Login Successfully!",
+          icon: "success",
+          draggable: true,
+        });
+        navigate("/");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          footer: '<a href="#">Why do I have this issue?</a>',
+        });
       });
   };
 
