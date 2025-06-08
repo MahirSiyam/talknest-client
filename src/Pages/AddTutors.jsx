@@ -2,9 +2,11 @@ import axios from "axios";
 import React, { use } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
+import { useNavigate } from "react-router";
 
 const AddTutors = () => {
-    const {user} = use(AuthContext);
+  const { user } = use(AuthContext);
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -14,22 +16,21 @@ const AddTutors = () => {
 
     submitData.review = [];
 
-
-    axios.post('http://localhost:3000/tutorials' , submitData)
-    .then(res => {
-        if(res.data.insertedId)
-        {
-            Swal.fire({
-  title: "All successfully!",
-  icon: "success",
-  draggable: true
-});
+    axios
+      .post("http://localhost:3000/tutorials", submitData)
+      .then((res) => {
+        if (res.data.insertedId) {
+          Swal.fire({
+            title: "Add successfully!",
+            icon: "success",
+            draggable: true,
+          });
         }
-    })
-    .catch(error => {
+        navigate('/findTutors');
+      })
+      .catch((error) => {
         console.log(error);
-    })
-
+      });
   };
 
   return (
@@ -112,7 +113,10 @@ const AddTutors = () => {
 
       {/* Submit Button */}
       <div className="md:col-span-2">
-        <button type="submit" className="btn bg-[#117a65] font-semibold text-white w-full">
+        <button
+          type="submit"
+          className="btn bg-[#117a65] font-semibold text-white w-full"
+        >
           Submit
         </button>
       </div>

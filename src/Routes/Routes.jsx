@@ -10,6 +10,7 @@ import Register from "../Pages/Register";
 import ErrorPage from "../Pages/ErrorPage";
 import PrivateRoute from "../Provider/PrivateRoute";
 import TutorsDetails from "../Components/TutorsDetails";
+import axios from "axios";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
       {
         path: "/findTutors",
         element: <FindTutors></FindTutors>,
+        loader: () => axios(`http://localhost:3000/tutorials`),
       },
       {
         path: "/addTutors",

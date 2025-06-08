@@ -9,10 +9,12 @@ const myTutorsPromise = email => {
 const MyTutors = () => {
 
     const {user} = use(AuthContext);
-    console.log(user);
+    // console.log(user);
+
+    
 
     return (
-        <div>
+        <div className='mt-25 mb-25 md:ml-25 lg:ml-35'>
             <Suspense fallback={<div className='max-h-screen flex justify-center items-center mt-35 mb-35'>
                   <span className="loading loading-bars loading-xl"></span>
                </div>}>
