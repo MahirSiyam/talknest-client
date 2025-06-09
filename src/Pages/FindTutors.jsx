@@ -7,6 +7,7 @@ import { useLoaderData } from "react-router";
 const FindTutors = () => {
   const tutorialsDB = useLoaderData();
   const [tutorials, setTutorials] = useState(tutorialsDB.data || []);
+  // console.log(tutorials);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {

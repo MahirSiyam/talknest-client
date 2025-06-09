@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../Components/Banner';
 import Blog from '../Components/Blog';
 import Blog2 from '../Components/Blog2';
+import Stats from '../Components/Stats';
 
 const Home = () => {
     return (
@@ -9,6 +10,10 @@ const Home = () => {
             <title>Home</title>
             <div className='mb-10'>
                 <Banner></Banner>
+            </div>
+
+            <div className='w-9/12 mx-auto flex justify-center mb-10'>
+                <Stats></Stats>
             </div>
 
             <div className='max-w-7xl mx-auto mb-10'>
