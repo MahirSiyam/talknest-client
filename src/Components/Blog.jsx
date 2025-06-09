@@ -26,7 +26,7 @@ const blogs = [
 
 const Blog = () => {
   return (
-    <section className="p-10 bg-white text-center dark:bg-base-100 rounded-2xl border-1 border-gray-50">
+    <section className="p-5 bg-white text-center dark:bg-base-100 rounded-2xl border-1 border-gray-50">
       <Fade direction="down" triggerOnce>
         <h2 className="text-4xl font-bold mb-2 text-base-200 dark:text-base-content">Latest Blog</h2>
       </Fade>

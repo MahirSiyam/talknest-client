@@ -11,10 +11,9 @@ const MyTutors = () => {
     const {user} = use(AuthContext);
     // console.log(user);
 
-    
-
     return (
-        <div className='mt-25 mb-25 md:ml-25 lg:ml-35'>
+        <div className='mt-22 mb-22 w-5/6 mx-auto'>
+            <title>My Tutors</title>
             <Suspense fallback={<div className='max-h-screen flex justify-center items-center mt-35 mb-35'>
                   <span className="loading loading-bars loading-xl"></span>
                </div>}>

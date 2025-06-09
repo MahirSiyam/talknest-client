@@ -66,6 +66,7 @@ const UpdatePage = () => {
 
   return (
     <div>
+      <title>Update Page</title>
       <form
         onSubmit={handleUpdate}
         className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 px-20 mt-5 mb-5"

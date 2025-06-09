@@ -49,7 +49,6 @@ const MyTutorsLists = ({ myTutorsPromise }) => {
     }
   });
 };
-
   return (
     <div>
       {myTutorsData.length === 0 ? (
@@ -99,7 +98,7 @@ const MyTutorsLists = ({ myTutorsPromise }) => {
                     {myTutor.language}
                   </td>
                   <td className="border-1 border-gray-50">{myTutor.price}</td>
-                  <th className="border-1 border-gray-50">
+                  <th className="border-1 border-gray-50 font-light">
                     {myTutor.description}
                   </th>
                   <th className="border-1 border-gray-50"></th>

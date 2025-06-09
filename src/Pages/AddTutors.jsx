@@ -34,7 +34,9 @@ const AddTutors = () => {
   };
 
   return (
-    <form
+    <div>
+      <title>Add Tutors</title>
+      <form
       onSubmit={handleSubmit}
       className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 px-20 mt-5 mb-5"
     >
@@ -121,6 +123,7 @@ const AddTutors = () => {
         </button>
       </div>
     </form>
+    </div>
   );
 };
 

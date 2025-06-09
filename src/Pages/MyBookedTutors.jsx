@@ -12,6 +12,7 @@ const MyBookedTutors = () => {
 
     return (
         <div>
+            <title>My Booked Tutors</title>
             <Suspense fallback ={<div className='max-h-screen flex justify-center items-center mt-35 mb-35'>
                   <span className="loading loading-bars loading-xl"></span>
                </div>}>
