@@ -11,6 +11,7 @@ import ErrorPage from "../Pages/ErrorPage";
 import PrivateRoute from "../Provider/PrivateRoute";
 import TutorsDetails from "../Components/TutorsDetails";
 import axios from "axios";
+import UpdatePage from "../Pages/UpdatePage";
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +51,13 @@ export const router = createBrowserRouter([
           <TutorsDetails></TutorsDetails>
         </PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:3000/tutorials/${params.id}`)
+      },
+      {
+        path: "/update/:id",
+        element: <PrivateRoute>
+          <UpdatePage></UpdatePage>
+        </PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:3000/tutorials/${params.id}`),
       },
       {
         path: "/auth/logIn",

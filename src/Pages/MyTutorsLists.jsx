@@ -4,6 +4,7 @@ import noDataFound from "../assets/animation/No data found.json";
 import Swal from "sweetalert2";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { MdOutlineTipsAndUpdates } from "react-icons/md";
+import { Link } from "react-router";
 
 const MyTutorsLists = ({ myTutorsPromise }) => {
   const myTutors = use(myTutorsPromise);
@@ -103,9 +104,9 @@ const MyTutorsLists = ({ myTutorsPromise }) => {
                   </th>
                   <th className="border-1 border-gray-50"></th>
                   <th className="flex gap-2">
-                    <button className="btn bg-[#117a65] font-semibold text-white">
+                    <Link to={`/update/${myTutor._id}`}><button className="btn bg-[#117a65] font-semibold text-white">
                       <MdOutlineTipsAndUpdates size={23} />
-                    </button>
+                    </button></Link>
                     <button
                       onClick={() => handleDelete(myTutor?._id)}
                       className="btn bg-[#117a65] font-semibold text-white"
