@@ -5,6 +5,8 @@ const TutorsCard = ({ tutorial }) => {
   const { _id, name, image, language, description } = tutorial;
   // console.log(tutorial);
 
+  
+
   return (
     <div className="card card-side bg-base-100 h-80 shadow-lg border-1 border-gray-100 rounded-2xl">
       <figure className="w-1/2">
