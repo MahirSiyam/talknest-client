@@ -7,7 +7,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 import Swal from "sweetalert2";
 
 const Register = () => {
-  const { createUser, googleLogIn } = use(AuthContext);
+  const { createUser, googleLogIn , updateUser , setUser } = use(AuthContext);
   const navigate = useNavigate();
 
   const provider = new GoogleAuthProvider();
@@ -42,16 +42,20 @@ const Register = () => {
     const photoURL = form.photoURL.value;
     const password = form.password.value;
 
-    console.log({ name, email, photoURL, password });
+    // console.log({ name, email, photoURL, password });
 
     createUser(email, password)
-      .then(() => {
-        Swal.fire({
-          title: "Register Successfully!",
-          icon: "success",
-          draggable: true,
-        });
-        navigate("/");
+      .then((result) => {
+        const user = result.user;
+
+        updateUser({ displayName: name, photoURL: photoURL })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photoURL });
+            navigate("/");
+          })
+          .catch((error) => {
+            setUser(error);
+          });
       })
       .catch(() => {
         Swal.fire({

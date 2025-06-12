@@ -1,15 +1,22 @@
 import React, { Suspense, use } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import MyTutorsLists from './MyTutorsLists';
+import useTutorials from '../Provider/useTutorials';
 
-const myTutorsPromise = email => {
-    return fetch(`http://localhost:3000/tutorials?email=${email}`).then(res => res.json());
-}
+// const myTutorsPromise = (email , accessToken) => {
+//     return fetch(`http://localhost:3000/tutorials?email=${email}` , {
+//         headers: {
+//             authorization: `Bearer ${accessToken}`
+//         }
+//     }).then(res => res.json());
+// }
 
 const MyTutors = () => {
 
     const {user} = use(AuthContext);
     // console.log(user);
+
+    const {myTutorsPromise} = useTutorials();
 
     return (
         <div className='mt-22 mb-22 w-5/6 mx-auto'>

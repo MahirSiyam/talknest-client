@@ -1,14 +1,21 @@
 import React, { Suspense, use } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import MyBookedTutorsCard from './MyBookedTutorsCard';
+import useBookTutorsApi from '../Provider/usBookTutorsApi';
 
-const bookTutorsPromise = (email) => {
-    return fetch(`http://localhost:3000/bookTutors?email=${email}`).then(res => res.json())
-}
+// const bookTutorsPromise = (email , accessToken) => {
+//     return fetch(`http://localhost:3000/bookTutors?email=${email}` , {
+//         headers: {
+//             authorization: `Bearer ${accessToken}`
+//         }
+//     }).then(res => res.json())
+// }
 
 const MyBookedTutors = () => {
-
     const {user} = use(AuthContext);
+    const {bookTutorsPromise} = useBookTutorsApi();
+
+    console.log('token in the context', user.accessToken);
 
     return (
         <div>

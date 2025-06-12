@@ -2,7 +2,9 @@ import React from "react";
 
 const Cards = ({ bookTutor }) => {
 
-    const {name, image, language,price, description} = bookTutor;
+  console.log(bookTutor);
+
+    const {name, image, language,price, description , review } = bookTutor;
 
 //   console.log(bookTutor);
   return (
@@ -19,7 +21,7 @@ const Cards = ({ bookTutor }) => {
         <p className="text-lg font-semibold">Price: {price} $</p>
         <p className="text-lg font-extralight">{description}</p>
          <div className="card-actions justify-end mt-5">
-          <button className="btn bg-[#117a65] font-semibold text-white">Review</button>
+          <button className="btn bg-[#117a65] font-semibold text-white">Review: {review.length}</button>
          </div>
         </div>
       </div>

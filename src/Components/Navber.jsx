@@ -89,6 +89,7 @@ const Navber = () => {
         </ul>
       </div>
       <div className="navbar-end gap-3">
+        
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
           <input

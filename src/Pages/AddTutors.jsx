@@ -12,9 +12,9 @@ const AddTutors = () => {
     const form = e.target;
     const formData = new FormData(form);
     const submitData = Object.fromEntries(formData.entries());
-    // console.log(submitData);
+    console.log(submitData);
 
-    submitData.review = [];
+    submitData.review = 0;
 
     axios
       .post("http://localhost:3000/tutorials", submitData)
