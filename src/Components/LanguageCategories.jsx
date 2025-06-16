@@ -5,47 +5,47 @@ const languageData = [
   {
     id: 1,
     language: "English",
-    image: "/src/assets/logo/england.png",
+    image: "https://cdn-icons-png.freepik.com/256/4009/4009124.png?uid=R123796307&ga=GA1.1.609713635.1748710786&semt=ais_hybrid",
   },
   {
     id: 2,
     language: "Spanish",
-    image: "/src/assets/logo/spain.png",
+    image: "https://cdn-icons-png.freepik.com/256/12357/12357536.png?uid=R123796307&ga=GA1.1.609713635.1748710786&semt=ais_hybrid",
   },
   {
     id: 3,
     language: "French",
-    image: "/src/assets/logo/france.png",
+    image: "https://cdn-icons-png.freepik.com/256/12357/12357652.png?uid=R123796307&ga=GA1.1.609713635.1748710786&semt=ais_hybrid",
   },
   {
     id: 4,
     language: "German",
-    image: "/src/assets/logo/germany.png",
+    image: "https://cdn-icons-png.freepik.com/256/11948/11948652.png?uid=R123796307&ga=GA1.1.609713635.1748710786&semt=ais_hybrid",
   },
   {
     id: 5,
     language: "Chinese",
-    image: "/src/assets/logo/china.png",
+    image: "https://cdn-icons-png.freepik.com/256/4008/4008919.png?uid=R123796307&ga=GA1.1.609713635.1748710786&semt=ais_hybrid",
   },
   {
     id: 6,
     language: "Arabic",
-    image: "/src/assets/logo/united-arab-emirates.png",
+    image: "https://cdn-icons-png.freepik.com/256/6069/6069931.png?uid=R123796307&ga=GA1.1.609713635.1748710786&semt=ais_hybrid",
   },
   {
     id: 7,
     language: "Japanese",
-    image: "/src/assets/logo/japan.png",
+    image: "https://cdn-icons-png.freepik.com/256/11948/11948786.png?uid=R123796307&ga=GA1.1.609713635.1748710786&semt=ais_hybrid",
   },
   {
     id: 8,
     language: "Italian",
-    image: "/src/assets/logo/italy.png",
+    image: "https://cdn-icons-png.freepik.com/256/11948/11948777.png?uid=R123796307&ga=GA1.1.609713635.1748710786&semt=ais_hybrid",
   },
   {
     id: 9,
     language: "Portuguese",
-    image: "/src/assets/logo/portugal.png",
+    image: "https://cdn-icons-png.freepik.com/256/3054/3054041.png?uid=R123796307&ga=GA1.1.609713635.1748710786&semt=ais_hybrid",
   },
 ];
 

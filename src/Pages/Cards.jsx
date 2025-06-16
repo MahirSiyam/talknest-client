@@ -21,7 +21,7 @@ const Cards = ({ bookTutor }) => {
         <p className="text-lg font-semibold">Price: {price} $</p>
         <p className="text-lg font-extralight">{description}</p>
          <div className="card-actions justify-end mt-5">
-          <button className="btn bg-[#117a65] font-semibold text-white">Review: {review.length}</button>
+          <button className="btn bg-[#117a65] font-semibold text-white">Review : {review}</button>
          </div>
         </div>
       </div>

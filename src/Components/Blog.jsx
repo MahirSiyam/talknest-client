@@ -40,14 +40,14 @@ const Blog = () => {
       <Zoom cascade damping={0.2} triggerOnce>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
           {blogs.map((blog, index) => (
-            <div key={index} className="text-left border-1 border-gray-100 p-3 rounded-2xl shadow-2xl">
+            <div key={index} className="text-left border-1 border-gray-100 p-5 rounded-2xl shadow-2xl">
               <img
                 src={blog.image}
                 alt={blog.title}
                 className="rounded shadow-sm mb-4 w-full h-48 object-cover"
               />
-              <h3 className="font-semibold text-lg text-base-200 dark:text-base-content">{blog.title}</h3>
-              <p className="text-sm text-base-200 dark:text-base-content mt-2">{blog.date}</p>
+              <h3 className="font-light text-md text-base-200 dark:text-base-content">{blog.title}</h3>
+              <p className="text-sm text-base-200 dark:text-base-content mt-2 font-light">{blog.date}</p>
             </div>
           ))}
         </div>

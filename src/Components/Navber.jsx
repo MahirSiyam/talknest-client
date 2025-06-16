@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React, { use, useEffect, useState } from "react";
 import { NavLink } from "react-router";
 import logo from "../assets/logo/linguistic_7514362.png";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -27,6 +27,19 @@ const Navber = () => {
         });
       });
   };
+  
+  const [isDarkMode , setIsDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme" , isDarkMode ? "dark" : "light");
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  } , [isDarkMode]);
+
+  const handleThemeToggle = () => {
+    setIsDarkMode(prev => !prev);
+  };
 
   const links = (
     <>
@@ -49,7 +62,7 @@ const Navber = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-lg border-b-1 border-b-gray-100">
+    <div className="navbar fixed top-0 z-50 bg-base-100/35 backdrop-blur-xl shadow-md transition-all duration-300">
       <div className="navbar-start md:gap-2">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -94,6 +107,8 @@ const Navber = () => {
           {/* this hidden checkbox controls the state */}
           <input
             type="checkbox"
+            onChange={handleThemeToggle}
+            checked={isDarkMode}
             className="theme-controller"
             value="business"
           />

@@ -15,7 +15,7 @@ const TutorsCard = ({ tutorial }) => {
         <p className="font-extralight">Language: {language}</p>
         <p className="font-extralight">{description}</p>
         <div className="card-actions justify-end mt-5">
-          <p>Review: {review.length}</p>
+          <p>Review : {review}</p>
           <Link to={`/tutorsDetails/${_id}`}>
             <button className="btn bg-[#117a65] font-semibold text-white">
               View Details

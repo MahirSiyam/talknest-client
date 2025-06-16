@@ -34,8 +34,12 @@ const TutorsDetails = () => {
           draggable: true,
         });
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+       Swal.fire({
+          title: "Already Booked!",
+          icon: "error",
+          draggable: true,
+        });
       });
   };
 

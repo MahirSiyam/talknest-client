@@ -10,7 +10,7 @@ const HomeLayout = () => {
     location.pathname === "/auth/register";
 
   return (
-    <div>
+    <div className="pt-15">
       <Navber></Navber>
       <Outlet></Outlet>
       {!footerHide && <Footer></Footer>}

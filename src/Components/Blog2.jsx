@@ -17,7 +17,7 @@ const Blog2 = () => {
           <div className="flex flex-col items-center text-center border-1 border-gray-100 p-3 shadow-2xl rounded-2xl">
             <Lottie animationData={animation1} className='w-full max-w-[335px] h-auto'/>
             <h3 className="text-xl font-semibold mb-3 mt-7 text-base-200 dark:text-base-content">5000 Online Courses</h3>
-            <p className="text-base-200 dark:text-base-content text-sm ">
+            <p className="text-base-200 font-extralight dark:text-base-content text-sm">
               Learn multiple languages with our wide range of interactive and engaging courses anytime, anywhere.
             </p>
           </div>
@@ -25,7 +25,7 @@ const Blog2 = () => {
           <div className="flex flex-col items-center text-center border-1 border-gray-100 p-3 shadow-2xl rounded-2xl">
             <Lottie animationData={animation2} className="w-full max-w-[235px] h-auto" />
             <h3 className="text-xl font-semibold mb-3 mt-4 text-base-200 dark:text-base-content">Highly Expert Instructors</h3>
-            <p className="text-base-200 dark:text-base-content text-sm ">
+            <p className="text-base-200 font-extralight dark:text-base-content text-sm">
               Our certified language coaches help you improve your skills effectively and confidently.
             </p>
           </div>
@@ -33,7 +33,7 @@ const Blog2 = () => {
           <div className="flex flex-col items-center text-center border-1 border-gray-100 p-3 shadow-2xl rounded-2xl">
             <Lottie animationData={animation3} className="w-full max-w-[235px] h-auto" />
             <h3 className="text-xl font-semibold mb-3 mt-4 text-base-200 dark:text-base-content">Lifetime Access</h3>
-            <p className="text-base-200 dark:text-base-content text-sm ">
+            <p className="text-base-200 font-extralight dark:text-base-content text-sm ">
               Access all your enrolled courses for life—learn at your own pace and revisit lessons anytime.
             </p>
           </div>

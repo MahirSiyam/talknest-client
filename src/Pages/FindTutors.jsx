@@ -1,22 +1,49 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import TutorsCard from "../Components/TutorsCard";
 import Lottie from "lottie-react";
 import noDataFound from "../assets/animation/No data found.json";
 import { useLocation } from "react-router";
+import axios from "axios";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const FindTutors = () => {
+
+  const {user , loading} = use(AuthContext);
+  console.log(user);
+  
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const defaultSearch = queryParams.get("language") || "";
 
   const [searchTerm, setSearchTerm] = useState(defaultSearch);
   const [tutorials, setTutorials] = useState([]);
-
+console.log(tutorials);
   useEffect(() => {
-    fetch(`http://localhost:3000/tutorials?language=${searchTerm}`)
+    if(user?.accessToken)
+    {
+      fetch(`http://localhost:3000/tutorials?language=${searchTerm}`, {
+      headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${user?.accessToken}`,
+  },
+})
       .then((res) => res.json())
       .then((data) => setTutorials(data));
-  }, [searchTerm]);
+    }
+  }, [searchTerm , user , loading]);
+
+  useEffect(() => {
+    if(user?.accessToken)
+    {
+      axios(`http://localhost:3000/tutorials` , {
+      headers: {
+    Authorization: `Bearer ${user?.accessToken}`,
+  },
+})
+    .then((data) => console.log(data))
+    .catch(err => console.log(err))
+    }
+  } ,[user , loading])
 
   return (
     <div>
