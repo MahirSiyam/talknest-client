@@ -25,7 +25,7 @@ const MyTutorsLists = ({ myTutorsPromise }) => {
     confirmButtonText: "Yes, delete it!",
   }).then((result) => {
     if (result.isConfirmed) {
-      fetch(`http://localhost:3000/tutorials/${id}`, {
+      fetch(`https://talknest-server.vercel.app/tutorials/${id}`, {
         method: "DELETE",
         headers: {
           "content-type": "application/json",
@@ -101,7 +101,7 @@ const MyTutorsLists = ({ myTutorsPromise }) => {
                   <th className="border-1 border-gray-50 font-light">
                     {myTutor.description}
                   </th>
-                  <th className="border-1 border-gray-50"></th>
+                  <th className="border-1 border-gray-50">{myTutor.review}</th>
                   <th className="flex gap-2">
                     <Link to={`/update/${myTutor._id}`}><button className="btn bg-[#117a65] font-semibold text-white">
                       <MdOutlineTipsAndUpdates size={23} />

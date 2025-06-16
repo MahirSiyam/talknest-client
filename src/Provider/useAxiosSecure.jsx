@@ -3,7 +3,7 @@ import React, { use } from 'react';
 import { AuthContext } from './AuthProvider';
 
 const axiosInstance = axios.create({
-    baseURL: 'http://localhost:3000'
+    baseURL: 'https://talknest-server.vercel.app'
 })
 
 const useAxiosSecure = () => {
@@ -30,10 +30,8 @@ const useAxiosSecure = () => {
                 console.log(err);
             })
         }
-
         return Promise.reject(error)
     })
-
     return axiosInstance;
 };
 

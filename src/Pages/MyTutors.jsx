@@ -4,7 +4,7 @@ import MyTutorsLists from './MyTutorsLists';
 import useTutorials from '../Provider/useTutorials';
 
 // const myTutorsPromise = (email , accessToken) => {
-//     return fetch(`http://localhost:3000/tutorials?email=${email}` , {
+//     return fetch(`https://talknest-server.vercel.app/tutorials?email=${email}` , {
 //         headers: {
 //             authorization: `Bearer ${accessToken}`
 //         }

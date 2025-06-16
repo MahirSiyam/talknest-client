@@ -27,7 +27,7 @@ const UpdatePage = () => {
         };
         
 
-  fetch(`http://localhost:3000/tutorials/${tutorialsData?._id}`, {
+  fetch(`https://talknest-server.vercel.app/tutorials/${tutorialsData?._id}`, {
   method: "PUT",
   headers: {
     "Content-Type": "application/json", 

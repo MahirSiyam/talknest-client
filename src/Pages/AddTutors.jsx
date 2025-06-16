@@ -17,7 +17,7 @@ const AddTutors = () => {
     submitData.review = 0;
 
     axios
-      .post("http://localhost:3000/tutorials", submitData)
+      .post("https://talknest-server.vercel.app/tutorials", submitData)
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({

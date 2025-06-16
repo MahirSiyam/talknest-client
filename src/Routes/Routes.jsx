@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
       {
         path: "/findTutors",
         element: <FindTutors></FindTutors>,
-        // loader: () => axios(`http://localhost:3000/tutorials`),
+        // loader: () => axios(`https://talknest-server.vercel.app/tutorials`),
       },
       {
         path: "/addTutors",
@@ -50,14 +50,14 @@ export const router = createBrowserRouter([
         element: <PrivateRoute>
           <TutorsDetails></TutorsDetails>
         </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:3000/tutorials/${params.id}`)
+        loader: ({params}) => fetch(`https://talknest-server.vercel.app/tutorials/${params.id}`)
       },
       {
         path: "/update/:id",
         element: <PrivateRoute>
           <UpdatePage></UpdatePage>
         </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:3000/tutorials/${params.id}`),
+        loader: ({params}) => fetch(`https://talknest-server.vercel.app/tutorials/${params.id}`),
       },
       {
         path: "/auth/logIn",

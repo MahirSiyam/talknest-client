@@ -11,7 +11,7 @@ function Stats() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3000/stats")
+    fetch("https://talknest-server.vercel.app/stats")
       .then((res) => res.json())
       .then((data) => {
         setStats(data);

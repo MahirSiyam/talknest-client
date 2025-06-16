@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const TutorsCard = ({ tutorial }) => {
-  const { _id, name, image, language, description , review} = tutorial;
-  console.log(tutorial);
+  const { _id, name, image, language, description, review } = tutorial;
 
   return (
     <div className="card card-side bg-base-100 h-80 shadow-lg border-1 border-gray-100 rounded-2xl">
@@ -14,13 +13,12 @@ const TutorsCard = ({ tutorial }) => {
         <h2 className="text-xl font-bold">{name}</h2>
         <p className="font-extralight">Language: {language}</p>
         <p className="font-extralight">{description}</p>
-        <div className="card-actions justify-end mt-5">
-          <p>Review : {review}</p>
+        <div className="card-actions justify-between items-center mt-5">
+          <div className="text-md font-semibold border-1 p-[6px] rounded-md">Reviews: {review}</div>
           <Link to={`/tutorsDetails/${_id}`}>
             <button className="btn bg-[#117a65] font-semibold text-white">
               View Details
             </button>
-            
           </Link>
         </div>
       </div>

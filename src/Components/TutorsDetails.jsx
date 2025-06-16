@@ -8,7 +8,7 @@ const TutorsDetails = () => {
   const { user } = use(AuthContext);
   // console.log(user);
   const details = useLoaderData();
-  const { _id, email, name, image, language, description, price } = details;
+  const { _id, email, name, image, language, description, price , review } = details;
 
   //   console.log(details);
 
@@ -26,7 +26,7 @@ const TutorsDetails = () => {
     };
 
     axios
-      .post("http://localhost:3000/bookTutors", booktutors)
+      .post("https://talknest-server.vercel.app/bookTutors", booktutors)
       .then(() => {
         Swal.fire({
           title: "Booked Successful!",
@@ -53,6 +53,7 @@ const TutorsDetails = () => {
         <h2 className="text-2xl font-bold">{name}</h2>
         <p className="text-lg font-semibold">Language: {language}</p>
         <p className="text-lg font-semibold">Price: {price} $</p>
+        <p className="text-lg font-semibold">Reviews: {review}</p>
         <p className="text-lg font-extralight">{description}</p>
         <div className="card-actions">
           <button

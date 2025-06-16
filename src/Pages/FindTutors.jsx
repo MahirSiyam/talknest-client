@@ -21,7 +21,7 @@ console.log(tutorials);
   useEffect(() => {
     if(user?.accessToken)
     {
-      fetch(`http://localhost:3000/tutorials?language=${searchTerm}`, {
+      fetch(`https://talknest-server.vercel.app/tutorials?language=${searchTerm}`, {
       headers: {
     'Content-Type': 'application/json',
     Authorization: `Bearer ${user?.accessToken}`,
@@ -35,7 +35,7 @@ console.log(tutorials);
   useEffect(() => {
     if(user?.accessToken)
     {
-      axios(`http://localhost:3000/tutorials` , {
+      axios(`https://talknest-server.vercel.app/tutorials` , {
       headers: {
     Authorization: `Bearer ${user?.accessToken}`,
   },
