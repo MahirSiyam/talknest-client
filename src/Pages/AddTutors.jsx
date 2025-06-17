@@ -42,7 +42,7 @@ const AddTutors = () => {
       <title>Add Tutors</title>
       <form
       onSubmit={handleSubmit}
-      className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 px-20 mt-5 mb-5"
+      className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 md:px-20 mt-5 mb-5"
     >
       {/* Title */}
       <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
