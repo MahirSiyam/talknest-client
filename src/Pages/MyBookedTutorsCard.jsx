@@ -5,7 +5,7 @@ import Lottie from "lottie-react";
 
 const MyBookedTutorsCard = ({ bookTutorsPromise }) => {
   const bookedTutors = use(bookTutorsPromise);
-  console.log(bookedTutors);
+  // console.log(bookedTutors);
 
   return (
     <div>

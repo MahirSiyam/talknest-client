@@ -54,7 +54,7 @@ const TutorsDetails = () => {
         <p className="text-lg font-semibold">Language: {language}</p>
         <p className="text-lg font-semibold">Price: {price} $</p>
         <p className="text-lg font-semibold">Reviews: {review}</p>
-        <p className="text-lg font-extralight">{description}</p>
+        <p className="text-md md:text-lg font-extralight w-full h-40 flex-wrap">{description}</p>
         <div className="card-actions">
           <button
             onClick={handleBookNow}

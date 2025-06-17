@@ -12,7 +12,7 @@ const AddTutors = () => {
     const form = e.target;
     const formData = new FormData(form);
     const submitData = Object.fromEntries(formData.entries());
-    console.log(submitData);
+    // console.log(submitData);
 
     submitData.review = 0;
 
@@ -28,8 +28,12 @@ const AddTutors = () => {
         }
         navigate('/findTutors');
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        Swal.fire({
+            title: "Error!",
+            icon: "error",
+            draggable: true,
+          });
       });
   };
 

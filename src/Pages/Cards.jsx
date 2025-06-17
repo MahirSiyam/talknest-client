@@ -17,7 +17,7 @@ const Cards = ({ bookTutor }) => {
         <h2 className="text-2xl font-bold">{name}</h2>
         <p className="text-lg font-semibold">Language: {language}</p>
         <p className="text-lg font-semibold">Price: {price} $</p>
-        <p className="text-lg font-extralight">{description}</p>
+        <p className="text-md md:text-lg font-extralight w-full h-40 flex-wrap">{description}</p>
         <div className="card-actions justify-between mt-5">
         <ReviewButton tutorId={_id} />
         </div>

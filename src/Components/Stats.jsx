@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import tutors from "../assets/logo/tutor.png"
 import languages from "../assets/logo/languages.png"
 import users from "../assets/logo/user.png"
+import Swal from "sweetalert2";
 
 function Stats() {
   const [stats, setStats] = useState({
@@ -16,8 +17,13 @@ function Stats() {
       .then((data) => {
         setStats(data);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        // console.log(err);
+        Swal.fire({
+                    title: "Error!",
+                    icon: "error",
+                    draggable: true,
+                  });
       });
   }, []);
 

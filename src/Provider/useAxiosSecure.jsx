@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { use } from 'react';
 import { AuthContext } from './AuthProvider';
+import Swal from 'sweetalert2';
 
 const axiosInstance = axios.create({
     baseURL: 'https://talknest-server.vercel.app'
@@ -24,10 +25,18 @@ const useAxiosSecure = () => {
         {
             logOut()
             .then(() => {
-                console.log('log out');
+                Swal.fire({
+                            title: "Logout!",
+                            icon: "success",
+                            draggable: true,
+                          });
             })
-            .catch(err => {
-                console.log(err);
+            .catch(() => {
+                Swal.fire({
+                            title: "error!",
+                            icon: "error",
+                            draggable: true,
+                          });
             })
         }
         return Promise.reject(error)

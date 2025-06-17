@@ -5,15 +5,15 @@ const TutorsCard = ({ tutorial }) => {
   const { _id, name, image, language, description, review } = tutorial;
 
   return (
-    <div className="card card-side bg-base-100 h-80 shadow-lg border-1 border-gray-100 rounded-2xl">
-      <figure className="w-1/2">
+    <div className="card card-side bg-base-100 grid grid-cols-2 shadow-lg border-1 border-gray-100 rounded-2xl">
+      <figure className="">
         <img src={image} alt={name} className="h-full w-full object-cover" />
       </figure>
-      <div className="card-body w-1/2">
+      <div className="card-body">
         <h2 className="text-xl font-bold">{name}</h2>
         <p className="font-extralight">Language: {language}</p>
-        <p className="font-extralight">{description}</p>
-        <div className="card-actions justify-between items-center mt-5">
+        <p className="font-extralight flex-wrap w-full h-40">{description}</p>
+        <div className="card-actions justify-between items-center">
           <div className="text-md font-semibold border-1 p-[6px] rounded-md">Reviews: {review}</div>
           <Link to={`/tutorsDetails/${_id}`}>
             <button className="btn bg-[#117a65] font-semibold text-white">

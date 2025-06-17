@@ -12,7 +12,7 @@ const MyTutorsLists = ({ myTutorsPromise }) => {
 
   const [myTutorsData, setMyTutorsData] = useState(myTutors);
 
-  console.log(myTutorsData);
+  // console.log(myTutorsData);
 
   const handleDelete = (id) => {
   Swal.fire({

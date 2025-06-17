@@ -5,11 +5,12 @@ import noDataFound from "../assets/animation/No data found.json";
 import { useLocation } from "react-router";
 import axios from "axios";
 import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const FindTutors = () => {
 
   const {user , loading} = use(AuthContext);
-  console.log(user);
+  // console.log(user);
   
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -17,7 +18,7 @@ const FindTutors = () => {
 
   const [searchTerm, setSearchTerm] = useState(defaultSearch);
   const [tutorials, setTutorials] = useState([]);
-console.log(tutorials);
+// console.log(tutorials);
   useEffect(() => {
     if(user?.accessToken)
     {
@@ -32,18 +33,24 @@ console.log(tutorials);
     }
   }, [searchTerm , user , loading]);
 
-  useEffect(() => {
-    if(user?.accessToken)
-    {
-      axios(`https://talknest-server.vercel.app/tutorials` , {
+
+useEffect(() => {
+  if (user?.accessToken) {
+    axios(`https://talknest-server.vercel.app/tutorials`, {
       headers: {
-    Authorization: `Bearer ${user?.accessToken}`,
-  },
-})
-    .then((data) => console.log(data))
-    .catch(err => console.log(err))
-    }
-  } ,[user , loading])
+        Authorization: `Bearer ${user?.accessToken}`,
+      },
+    })
+      .then(() => {
+        
+        //console.log(res.data)
+      })
+      .catch(() => {
+       //console.log(error)
+      });
+  }
+}, [user, loading]);
+
 
   return (
     <div>

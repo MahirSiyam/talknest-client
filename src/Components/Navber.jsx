@@ -65,7 +65,7 @@ const Navber = () => {
     <div className="navbar fixed top-0 z-50 bg-base-100/35 backdrop-blur-xl shadow-md transition-all duration-300">
       <div className="navbar-start md:gap-2">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className="btn p-0 mr-1 md:p-2 btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -91,9 +91,9 @@ const Navber = () => {
         </div>
 
         <div className="flex justify-center items-center gap-1">
-          <img className="w-10 md:w-12 hidden md:flex" src={logo} alt="" />
+          <img className="w-8 md:w-12 hidden md:flex" src={logo} alt="" />
 
-          <a className="text-2xl font-bold">Talknest</a>
+          <a className="text-md font-semibold md:text-2xl md:font-bold">Talknest</a>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -101,7 +101,7 @@ const Navber = () => {
           {links}
         </ul>
       </div>
-      <div className="navbar-end gap-3">
+      <div className="navbar-end gap-1 md:gap-3">
         
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
@@ -143,13 +143,13 @@ const Navber = () => {
 
         {/* btn */}
         {user ? (
-          <button onClick={handleLogOut} className="btn bg-[#117a65] font-semibold text-white">Logout</button>
+          <button onClick={handleLogOut} className="btn bg-[#117a65] p-1 font-normal md:p-3 md:font-semibold text-white">Logout</button>
         ) : (
           <div className="flex gap-2">
-            <NavLink to={`/auth/logIn`} className="btn bg-[#117a65] font-semibold text-white">
+            <NavLink to={`/auth/logIn`} className="btn bg-[#117a65] p-1 md:p-3 font-normal md:font-semibold text-white">
               Login
             </NavLink>
-            <NavLink to={`/auth/register`} className="btn bg-[#117a65] font-semibold text-white">
+            <NavLink to={`/auth/register`} className="btn bg-[#117a65] p-1 font-normal md:p-3 md:font-semibold text-white">
               Register
             </NavLink>
           </div>
