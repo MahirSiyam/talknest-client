@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 const Banner = () => {
   return (
     <div
-      className="hero min-h-screen"
+      className="hero min-h-[70vh]"
       style={{
         backgroundImage:
           "url(https://img.freepik.com/premium-photo/teenager-people-national-flags-board_53876-22200.jpg?ga=GA1.1.609713635.1748710786&semt=ais_hybrid&w=740)",

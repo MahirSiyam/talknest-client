@@ -87,7 +87,7 @@ useEffect(() => {
             className="w-[360px] h-[355px] mx-auto"
           />
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 mx-auto mt-2 mb-2 p-2 md:p-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 w-11/12 mx-auto mt-2 mb-2 p-2 md:p-5">
             {tutorials.map((tutorial) => (
               <TutorsCard key={tutorial._id} tutorial={tutorial} />
             ))}
