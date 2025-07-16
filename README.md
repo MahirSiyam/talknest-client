@@ -6,8 +6,6 @@
 
 TalkNest is a modern web application that allows students to easily book tutors based on their language preferences and availability. It features a seamless experience for both users and admins, supporting functionalities like booking management, reviews, and secure authentication.
 
-This project was built as part of the Programming Hero Web Development Course (Assignment 11).
-
 ---
 
 ## 🚀 Key Features
@@ -42,5 +40,3 @@ This project was built as part of the Programming Hero Web Development Course (A
 - `dotenv`
 - `jsonwebtoken`
 - `mongoose`
-- `cookie-parser`
-- `stripe`
