@@ -21,11 +21,11 @@ const Home = () => {
         <LanguageCategories></LanguageCategories>
       </div>
 
-      <div className="max-w-7xl mx-auto mb-15">
+      <div className="max-w-7xl mx-auto mb-10">
         <Blog2></Blog2>
       </div>
 
-      <div className="max-w-7xl mx-auto mb-15">
+      <div className="max-w-7xl mx-auto mb-10">
         <Blog></Blog>
       </div>
     </div>
