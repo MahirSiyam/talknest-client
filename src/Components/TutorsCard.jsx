@@ -5,9 +5,9 @@ const TutorsCard = ({ tutorial }) => {
   const { _id, name, image,price, language, review } = tutorial;
 
   return (
-    <div className="flex-col md:flex gap-2 bg-base-100 shadow-lg border-2 border-gray-50 rounded-lg">
+    <div className="flex-col md:flex gap-2 bg-base-100 shadow-lg border-1 border-gray-50 rounded-lg">
       <figure className="">
-        <img src={image} alt={name} className="md:h-60 w-full object-cover rounded-t-md" />
+        <img src={image} alt={name} className="md:h-60 w-full object-cover rounded-t-lg" />
       </figure>
       <div className="card-body w-full p-2">
         <h2 className="text-xl font-bold">{name}</h2>
