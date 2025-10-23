@@ -12,7 +12,9 @@ const HomeLayout = () => {
   return (
     <div className="pt-15">
       <Navber></Navber>
-      <Outlet></Outlet>
+      <div className="max-w-10/12 mx-auto">
+        <Outlet></Outlet>
+      </div>
       {!footerHide && <Footer></Footer>}
     </div>
   );

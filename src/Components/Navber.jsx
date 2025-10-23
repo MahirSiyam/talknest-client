@@ -62,8 +62,9 @@ const Navber = () => {
   );
 
   return (
-    <div className="navbar fixed top-0 z-50 bg-base-100/35 backdrop-blur-xl shadow-md transition-all duration-300">
-      <div className="navbar-start md:gap-2">
+    <div className="w-full fixed top-0 z-50 backdrop-blur-lg shadow-md">
+      <div className="navbar p-0 max-w-10/12 mx-auto">
+        <div className="navbar-start md:gap-2">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn p-0 mr-1 md:p-2 btn-ghost lg:hidden">
             <svg
@@ -154,6 +155,7 @@ const Navber = () => {
             </NavLink>
           </div>
         )}
+      </div>
       </div>
     </div>
   );
